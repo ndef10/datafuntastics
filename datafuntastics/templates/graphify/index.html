@@ -1,3 +1,28 @@
+<style>
+    body {
+        background-color: bisque;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+</style>
+<div>
+    <img src="{{ logo }}" />
+</div>
 <h2>
     Reportes estadisticos
 </h2>
+<div>
+    <strong>Eje de las absicisas: {{ axis_x }}</strong>
+</div>
+<div>
+    <strong>Eje de las ordenadas: {{ axis_y }}</strong>
+</div>
+<div>
+    <strong>Eje Z: {{ axis_z }}</strong>
+</div>
+<div>
+    <strong>Prediccion: {{ prediccion }}</strong>
+</div>

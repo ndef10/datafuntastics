@@ -6,7 +6,13 @@ from io import BytesIO
 # Create your views here.
 def v_index(request):
     # return HttpResponse("index Graphify")
-    return render(request, "graphify/index.html", {})
+    prediccion = "Iccremento de 5% en ventas"
+    return render(request, "graphify/index.html", {
+        "axis_x": "Producto",
+        "axis_y": "Cantidad",
+        "prediccion": prediccion,
+        "logo": "https://img.freepik.com/premium-vector/analytic-graph-logo-vector-icon-illustration_12860-119.jpg "
+    })
 
 def v_reporte_png(request):
     # Datos para el gráfico (puedes adaptarlos según tus necesidades)
