@@ -7,7 +7,17 @@ from reportlab.pdfgen import canvas
  
 # Create your views here.
 def v_index(request):
-    return HttpResponse("Librarium index")
+    # return HttpResponse("Librarium index")
+    return render(request, "librarium/index.html")
+
+def data_analitics(request):
+    return render(request, "librarium/data_analitics.html")
+
+def data_frames(request):
+    return render(request, "librarium/data_frames.html")
+
+def servicios(request):
+    return render(request, "librarium/servicios.html")
 
 def v_reporte_pdf(request): #<----- View
     # Crear la respuesta HTTP con el tipo de contenido para PDF

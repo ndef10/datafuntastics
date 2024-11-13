@@ -20,7 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path("", include("librarium.urls")),
     path("graphify/", include("graphify.urls")),
-    path("librarium/", include("librarium.urls")),
+    # path("librarium/", include("librarium.urls")),
     path("sheetmarker/", include("sheetmarker.urls")),
     path('admin/', admin.site.urls),
 ]
@@ -32,3 +32,22 @@ urlpatterns = [
 # http://127.0.0.1:8000/graphify/reporte_png
 # http://127.0.0.1:8000/librarium/reporte_pdf
 # http://127.0.0.1:8000/sheetmarker/reporte_xls
+
+
+
+
+# http://127.0.0.1:8000/data-analitica
+
+# templetes/librarium/data_analitica.html
+# librarium/views.py -> def data_analitica
+
+
+# http://127.0.0.1:8000/data-frames
+
+# templetes/librarium/data_frames.html
+# librarium/views.py -> def data_frames
+
+# http://127.0.0.1:8000/servicios
+
+# templetes/librarium/servicios.html
+# librarium/views.py -> def servicios
