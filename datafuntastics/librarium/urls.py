@@ -7,7 +7,7 @@ urlpatterns = [
 
     path("data_analitics", views.data_analitics , name="data_analitics "),
     path("data_frames", views.data_frames , name="data_frames"),
-    path("servicios", views.servicios , name="servicios "),
+    
 ]
 
 
