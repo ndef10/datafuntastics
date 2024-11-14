@@ -7,6 +7,15 @@ import datetime
 def v_index(request):
     return HttpResponse("Sheetmarker index")
 
+def macros(request):
+    return render(request, "sheetmarker/macros.html")
+
+def powerbi(request):
+    return render(request, "sheetmarker/powerbi.html")
+
+def analitica(request):
+    return render(request, "sheetmarker/analitica.html")
+
 def v_reporte_xls(request):
     # Crear un libro de Excel
     workbook = Workbook()
