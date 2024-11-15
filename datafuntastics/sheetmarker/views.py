@@ -7,14 +7,36 @@ import datetime
 def v_index(request):
     return HttpResponse("Sheetmarker index")
 
+static_values = {
+    "direccion": "Las flores 4242424 | Concepcion", 
+    "direccion2": "Los Claveles 4242424 | Concepcion",
+    "direccion3": "Las Margaritas 4242424 | Concepcion",
+    "telefono": "59 34343333",
+    "correo": "correo@gmail.com",
+    "whatsapp": "+56933378817",
+    
+}
+    
 def macros(request):
-    return render(request, "sheetmarker/macros.html")
+    context = {
+        "static_values": static_values   
+    }
+    return render(request, "sheetmarker/macros.html", context)
 
 def powerbi(request):
-    return render(request, "sheetmarker/powerbi.html")
+    static_values['direccion'] = static_values['direccion2']
+    context = {
+        "static_values": static_values 
+    }
+    return render(request, "sheetmarker/powerbi.html", context)
 
 def analitica(request):
-    return render(request, "sheetmarker/analitica.html")
+    static_values['direccion'] = static_values['direccion3']
+    context = {
+        "static_values": static_values 
+    }
+    return render(request, "sheetmarker/analitica.html", context)
+
 
 def v_reporte_xls(request):
     # Crear un libro de Excel
